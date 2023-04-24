@@ -30,7 +30,7 @@ body {
   height: 100vh;
 }
 
-.header {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -196,7 +196,7 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-  .header {
+  header {
     display: flex;
     justify-content: center;
     align-items: center;
