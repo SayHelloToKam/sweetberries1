@@ -27,11 +27,17 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   grid-template-rows: auto auto auto 100px;
+  grid-template-areas: 
+  "header header header"
+  "main main main"
+  "cards-container cards-container cards-container"
+  "footer footer footer";
   height: 100vh;
 }
 
 header {
   display: flex;
+  grid-area: header;
   justify-content: space-between;
   align-items: center;
   padding: 40px 8%;
@@ -67,6 +73,7 @@ nav a {
 
 main {
   display: grid;
+  grid-area: main;
   grid-template-columns: auto 50%;
   padding: 20px 8%;
   column-gap: 50px;
@@ -75,7 +82,8 @@ main {
 
 main img {
   width: 100%;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
 
 .info h1 {
@@ -97,6 +105,7 @@ main img {
 
 .cards-container {
   display: grid;
+  grid-area: cards-container;
   grid-template-columns: repeat(3, 1fr);
   gap: 100px 40px;
   padding: 20px 8%;
@@ -158,12 +167,16 @@ main img {
 
 footer {
   display: flex;
+  grid-area: footer;
   background-color: var(--accent);
   justify-content: center;
   align-items: center;
 }
 
 @media screen and (min-width: 786px) and (max-width: 1023px) {
+  header {
+    margin-bottom: 10px;
+  }
   main {
     grid-template-columns: auto;
     text-align: center;
@@ -201,7 +214,7 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 40px 5% 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     position: relative;
   }
 
