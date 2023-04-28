@@ -2,6 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,500;1,8..144,500&display=swap");
 
+/* Good use of variables */
 :root {
   --background: #f5f3ef;
   --card: #ffffff;
@@ -11,6 +12,7 @@
   --outline: #dcdcdc;
 }
 
+/* CSS is well organised and ordered correctly */
 * {
   margin: 0;
   padding: 0;
@@ -112,6 +114,7 @@ main img {
   font-family: "Roboto Serif";
 }
 
+/* Great use of position relative and absolute to position the icon outside of the card */
 .detail-card {
   background-color: var(--card);
   border-radius: 40px;
@@ -138,6 +141,7 @@ main img {
   line-height: 1.5;
   font-weight: 300;
   font-family: "Roboto";
+  /* This margin bottom is not needed */
   margin-bottom: 70px;
 }
 
